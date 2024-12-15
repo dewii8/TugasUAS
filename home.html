@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaTalk</title>
+    <link rel="icon" href="assets/icon.png" sizes="32x32">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>     
+    <link rel="stylesheet" href="home.css"/> 
+    <script src="home.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/icon.png" alt="CatTalk Logo">
+            <p>CatTalk</p>
+        </div>
+        <div class="menu">
+            <a href="home.html"><img src="https://www.svgrepo.com/show/535437/home.svg" alt="Home"></a>
+            <a href="store.html"><img src="https://www.svgrepo.com/show/453417/store.svg" alt="Store"></a>
+            <a href="#"><img src="https://www.svgrepo.com/show/347113/live.svg" alt="Live"></a>
+            <a href="search.html"><img src="https://www.svgrepo.com/show/532555/search.svg" alt="Search"></a>
+            <a href="#"><img src="https://www.svgrepo.com/show/497360/notification.svg" alt="Notification"></a>
+            <a href="#"><img src="https://www.svgrepo.com/show/533268/message-square-dots.svg" alt="Chat"></a>
+        </div>
+        <div class="profile">
+            <a href="profil.html"><img src="assets/profil.jpeg" alt="Profile"></a>
+        </div>
+    </div>
+    <div class="recommendation-sidebar">
+        <div class="recommendation">
+            <h3>Rekomendasi Mengikuti</h3>
+            <ul>
+                <li>
+                    <img src="assets/profil.jpeg" alt="Profile">
+                    <div>
+                        <p>winter.family</p>
+                        <button>Ikuti</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/profil.jpeg" alt="Profile">
+                    <div>
+                        <p>sashi.tapel</p>
+                        <button>Ikuti</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/profil.jpeg" alt="Profile">
+                    <div>
+                        <p>sashi.tapel</p>
+                        <button>Ikuti</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/profil.jpeg" alt="Profile">
+                    <div>
+                        <p>sashi.tapel</p>
+                        <button>Ikuti</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/profil.jpeg" alt="Profile">
+                    <div>
+                        <p>sashi.tapel</p>
+                        <button>Ikuti</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <p>© 2024 Created by Wijayaning Dewi Ramadhani</p>
+        </footer>
+    </div>        
+    <div class="content">
+        <div class="story">
+            <h2>Story</h2>
+            <ul>
+                <li>
+                    <div class="story-item">
+                        <img src="postingan/kupluk.jpg" alt="foto">
+                    </div>
+                    siitem_
+                </li>
+                <li>
+                    <div class="story-item">
+                        <video src="postingan/winterfam.mp4" alt="video" controls></video>
+                    </div>
+                    winter.family
+                </li>
+                <li>
+                    <div class="story-item">
+                        <img src="postingan/cantik.jpg" alt="foto">
+                    </div>
+                    si_manis
+                </li>
+                <li>
+                    <div class="story-item">
+                        <img src="postingan/manjat.jpg" alt="foto">
+                    </div>
+                    imoet.bingits
+                </li>
+                <li>
+                    <div class="story-item">
+                        <video src="postingan/pintu.mp4" alt="video" controls></video>
+                    </div>
+                    hitamputih_
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tabs">
+            <button class="filter-button active" data-filter="all">Semua</button>
+            <button class="filter-button" data-filter="video">Video</button>
+            <button class="filter-button" data-filter="foto">Foto</button>
+        </div>
+        <div class="posts">
+            <div class="post" data-type="foto">
+                <div class="post-header">
+                    <img src="assets/profil.jpeg" alt="User Profile">
+                    <div class="post-username">winter.family</div>
+                </div>
+                <img src="postingan/maengki.jpg" alt="Post Image" class="post-image">
+                <div class="post-footer">
+                    <div class="post-actions">
+                        <img src="https://www.svgrepo.com/show/425984/like.svg" alt="Like" class="like-btn">
+                        <img src="https://www.svgrepo.com/show/522067/comment-1.svg" alt="Comment">
+                        <img src="https://www.svgrepo.com/show/479666/clip.svg" alt="Send">
+                    </div>
+                </div>
+            </div>
+            <div class="post" data-type="foto">
+                <div class="post-header">
+                    <img src="assets/profil.jpeg" alt="User Profile">
+                    <div class="post-username">imoet.bingits</div>
+                </div>
+                <img src="postingan/cilik.jpg" alt="Post Image" class="post-image">
+                <div class="post-footer">
+                    <div class="post-actions">
+                        <img src="https://www.svgrepo.com/show/425984/like.svg" alt="Like" class="like-btn">
+                        <img src="https://www.svgrepo.com/show/522067/comment-1.svg" alt="Comment">
+                        <img src="https://www.svgrepo.com/show/479666/clip.svg" alt="Send">
+                    </div>
+                </div>
+            </div>
+            <div class="post" data-type="video">
+                <div class="post-header">
+                    <img src="assets/profil.jpeg" alt="User Profile">
+                    <div class="post-username">sipit.com</div>
+                </div>
+                <video src="postingan/video kucing.mp4" alt="Video" class="post-video" controls></video>
+                <div class="post-footer">
+                    <div class="post-actions">
+                        <img src="https://www.svgrepo.com/show/425984/like.svg" alt="Like" class="like-btn">
+                        <img src="https://www.svgrepo.com/show/522067/comment-1.svg" alt="Comment">
+                        <img src="https://www.svgrepo.com/show/479666/clip.svg" alt="Send">
+                    </div>
+                </div>
+            </div>            
+            <div class="post" data-type="video">
+                <div class="post-header">
+                    <img src="assets/profil.jpeg" alt="User Profile">
+                    <div class="post-username">sashiii</div>
+                </div>
+                <video src="postingan/sashi.mp4" alt="Video" class="post-video" controls></video>
+                <div class="post-footer">
+                    <div class="post-actions">
+                        <img src="https://www.svgrepo.com/show/425984/like.svg" alt="Like" class="like-btn">
+                        <img src="https://www.svgrepo.com/show/522067/comment-1.svg" alt="Comment">
+                        <img src="https://www.svgrepo.com/show/479666/clip.svg" alt="Send">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

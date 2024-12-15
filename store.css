@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d2b1a1;
+    padding: 10px 20px;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    width: 40%;
+}
+
+.search-bar select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input {
+    padding: 10px;
+    margin: 0 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #623a18;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile img {
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Slidebar */
+.slider-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.category {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category::-webkit-scrollbar {
+    display: none;
+}
+
+.cat {
+    background-color: #623a18;
+    border-radius: 10px;
+    padding: 10px;
+    width: 170px;
+    height: 130px;
+    text-align: center;
+    color: white;
+    margin: 0 10px;
+    flex: none;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cat img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cat img:hover {
+    transform: scale(1.05);
+}
+
+.cat h2 {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #dad1b6;
+}
+
+.cat a {
+    color: #dad1b6;
+    text-decoration: none;
+}
+
+.cat a:hover {
+    text-decoration: underline;
+}
+
+.cat button {
+    background-color: #dad1b6;
+    color: rgb(44, 44, 44);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cat button:hover {
+    background-color: #c5ba9a;
+}
+
+.category {
+    height: 250px;
+}
+
+/* Products Section */
+.products {
+    padding-top: 10px; 
+    margin-top: 0; 
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.product-card {
+    background-color: white;
+    padding: 8px;
+    margin: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px; 
+}
+
+.price {
+    color: #623a18;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Untuk tablet (min-width: 768px dan max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .products .product-card {
+        width: 45%;
+    }
+
+    .slider-container {
+        padding: 10px 0;
+    }
+
+    .category {
+        height: 200px;
+    }
+
+    .cat {
+        width: 140px;
+        height: 110px;
+    }
+
+    .cat h2 {
+        font-size: 16px;
+    }
+}
+
+/* Untuk perangkat HP (max-width: 767px) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .category {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cat {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .cat img {
+        width: 100%;
+        height: auto;
+    }
+
+    .products .product-card {
+        width: 100%; /* Full width untuk HP */
+    }
+}

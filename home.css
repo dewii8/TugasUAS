@@ -1,0 +1,412 @@
+@font-face {
+    font-family: font;
+    src: url('font/Stabelo.otf');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+/*sidebar*/
+.sidebar {
+    position: fixed;
+    background-color: #d2b1a1;
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: font;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu {
+    margin-top: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu a img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 7px;
+}
+
+.profile img {
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* rekomendasi mengikuti */
+.recommendation-sidebar {
+    position: fixed;
+    margin-left: 80px;
+    top: 0px; 
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.recommendation-sidebar > div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-sidebar h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #d2b1a1;
+    padding-bottom: 5px;
+}
+
+/* Rekomendasi Mengikuti */
+.recommendation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+}
+
+.recommendation ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recommendation ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.recommendation ul li div p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.recommendation ul li button {
+    background-color: #d2b1a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recommendation ul li button:hover {
+    background-color: #b99782;
+}
+
+/*beranda*/
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.tabs button {
+    background-color: #d2b1a1;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tabs button.active {
+    background-color: #b38f7d;
+}
+
+.posts {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-header .post-username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.post-image, .post-video {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.post-footer {
+    padding: 10px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0px;
+}
+
+.post-actions img {
+    width: 17px;
+    cursor: pointer;
+}
+
+.post-actions img:nth-child(1) {
+    width: 20px;
+    cursor: pointer;
+}
+
+.post-likes {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post[data-type="video"] .post-image::after {
+    content: "\25B6";
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*Storybar*/
+.story {
+    background-color: #d2b1a1;
+    width: 100px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; right: 0;
+    top: 0; 
+}
+
+.story h2 {
+    text-align: center;
+    font-family: font;
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.story ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 100px);
+    overflow-y: auto; 
+}
+
+.story li {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;  
+}
+
+.story-item {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.story-item img,.story-item video {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.story ul::-webkit-scrollbar {
+    display: none;
+}
+
+.story ul {
+    scrollbar-width: none; 
+}
+
+/*footer*/
+.footer {
+    text-align: center; 
+    font-size: 12px; 
+    color: #666; 
+    margin-top: 20px;
+    padding: 10px 0; 
+    border-top: 1px solid #ddd; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* Style untuk tombol follow */
+.follow-btn {
+    padding: 5px 10px;
+    background-color: #d9a79e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.follow-btn.following {
+    background-color: #666;
+}
+
+/* Style untuk tombol hati */
+/* Tombol Ikuti */
+.follow-btn.following {
+    background-color: #666;
+    color: #fff;
+}
+
+/* Tombol Love */
+.like-btn.liked {
+    color: red;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .recommendation-sidebar {
+        width: 250px;
+        margin-left: 60px;
+    }
+
+    .content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .posts {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .story {
+        width: 80px;
+    }
+
+    .story h2 {
+        font-size: 20px;
+    }
+
+    .story-item {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Responsif untuk perangkat HP */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .recommendation-sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+        margin-left: 0;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .tabs {
+        gap: 10px;
+    }
+
+    .posts {
+        width: 100%;
+    }
+
+    .story {
+        display: none;
+    }
+
+    .tabs button {
+        padding: 8px 15px;
+    }
+}

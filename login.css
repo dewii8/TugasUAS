@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('assets/background login.png');
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.login-container {
+    text-align: center;
+    width: 300px;
+    background-color: #A67C5B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+  
+.logo {
+    font-family: 'Billabong', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+  
+.input-field {
+    width: 93%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #dabdb0;
+    color: #807124;
+}
+  
+.password-container {
+    position: relative;
+}
+  
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #623a18;
+    font-size: 13px;
+}
+  
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #623a18;
+    color: #ffffff!important;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+.or-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+  
+.or-divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #555;
+}
+  
+.or-divider span {
+    margin: 0 10px;
+    color: #555;
+}
+  
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+  
+.signup-container {
+    margin-top: 20px;
+}
+  
+.signup-container a {
+    color: #623a18;
+    text-decoration: none;
+}
+  
+.signup-container a:hover,
+.forgot-password:hover{
+    text-decoration: underline;
+}
